@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Contact Us</h1>
+  <!-- er + tab -->
+  <%# Time.now %>
+  <!-- pe + tab -->
+  <!-- (will show in the browser) -->
+  <%#= Time.now %>
+  <!-- # an array of students -->
+  <div class="form-group">
+    <form action="/contact" method="get">
+      <label for=""></label>
+      <input type="text" name="student" class="form-control" value="<%= params[:student] %>">
+      <input type="submit" class="btn btn-primary">
+    </form>
+  </div>
+  <ul>
+    <% @students.each do |student|  %>
+      <li><%= student %></li>
+    <% end %>
+  </ul>
+</div>
